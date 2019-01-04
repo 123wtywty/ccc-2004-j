@@ -6,6 +6,7 @@ def header_code(text):
         code = ord(i)
         header_list_code.append(code-65)
     return (header_list_code)
+
 def body_code(header_code, body_text):
     body_list = re.findall('[A-Z]', body_text)
     body_list_code = []
@@ -31,6 +32,7 @@ def body_code(header_code, body_text):
                 new_code -= 26
             i[p] = new_code
     return (body_list_code_pack)
+
 def uncode(body_code):
     res = []
     for i in body_code:
