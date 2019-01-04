@@ -2,7 +2,6 @@ def my_print(x, end="\n"):
     #print(x, end=end)
     pass
 
-
 def my_input():
     i1 = int(input())
     i2 = int(input())
