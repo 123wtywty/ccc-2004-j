@@ -21,11 +21,11 @@ def my_run(data):
     outupt = []
 
     l1, l2 = data
-    for ii1 in l1:
-        for ii2 in l2:
-            o = f'{ii1} as {ii2}'
+    for adj in l1:
+        for noun in l2:
+            o = '{} as {}'.format(adj, noun)
             outupt.append(o)
-            #print(f'{ii1} as {ii2}')
+            #print(f'{adj} as {ii2}')
 
     outuptstr = '\n'.join(outupt)
 
