@@ -39,4 +39,4 @@ def main():
     key, message = get_input()
     print(run(key, message))
 
-#main()
+main()
