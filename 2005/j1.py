@@ -1,6 +1,6 @@
 def my_print(text):
     pass
-    print(text)
+    #print(text)
 
 def get_input():
     my_print('Number of daytime minutes?')
@@ -47,7 +47,7 @@ def res(daytime_use, evening_use, weekend_use):
     return a_money, b_money, cheapest
 
 def res_print(a_money, b_money, cheapest):
-    str1 = 'Plan A costs {}\nPlan B costs {}\n{}'.format(a_money, b_money, cheapest)
+    str1 = 'Plan A costs {}\nPlan B costs {}\n{}'.format(a_money/100, b_money/100, cheapest)
     print(str1)
 
 

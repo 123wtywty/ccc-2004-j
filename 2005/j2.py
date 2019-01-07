@@ -1,13 +1,11 @@
 def divisor(x):
-    n = 1
+    n = 0
     list = []
     while n < x:
         n += 1
         q = x % n
         if q == 0:
             list.append(n)
-            x /= n
-            n -= 1
             continue
         else:
             pass
@@ -15,7 +13,7 @@ def divisor(x):
 
 
 def my_print(text):
-    print(text)
+    #print(text)
     pass
 
 
@@ -31,13 +29,13 @@ def main(lower_, upper_):
     c = 0
     for i in range(lower_, upper_+1):
         res = divisor(i)
-        if len(res) == 2:
+        if len(res) == 4:
             c += 1
     return c
 
 
 def res_print(lower_, upper_, c):
-    res_str = 'The number of RSA numbers between {} and {} is {}'.format(lower_, upper_, c)
+    res_str = 'The number of RSA numbers between {} and {} is {}.'.format(lower_, upper_, c)
     print(res_str)
 
 def run():
