@@ -1,5 +1,3 @@
-
-
 def get_room(size):
     room_wide = size[0]
     room_height = size[1]
@@ -33,8 +31,9 @@ def get_room(size):
 
     return list1
 
+
 if __name__ == '__main__':
-    size = [10, 8, 3, 2]
-    room = get_room(size)
+    size1 = [10, 8, 3, 2]
+    room = get_room(size1)
     for i in room:
         print(i)
