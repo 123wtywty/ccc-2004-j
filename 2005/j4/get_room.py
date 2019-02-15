@@ -28,7 +28,6 @@ def get_room(size):
         for n3 in range(cut_out_wide):
             line.append(0)
         list1.append(line)
-
     return list1
 
 
