@@ -9,6 +9,5 @@ def DFS(tree):
 
 
 
-
 for i in DFS(root):
     print(i.name)

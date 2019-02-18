@@ -1,18 +1,17 @@
 class node():
 
-    def __init__(self,name, *value):
+    def __init__(self,name, value=None):
         self.parent = []
 
         self.all_parents = []
 
         self.sons = []
         self.value = []
-        self.value += [i for i in value]
+        self.value += [value]
         self.dic = dict()
 
         self.name = name
         self.dis = 0
-        self.all_child = 0
 
         self.root = self
 
