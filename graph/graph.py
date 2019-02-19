@@ -73,6 +73,41 @@ class graph():
                 return self.dic[b]
 
 
+
+    def all_connect(self, ):
+        for k, v in self.dic.items():
+            v.tag = False
+        keys1 = []
+        for ii in self.dic.keys():
+            keys1.append(ii)
+        fist_node = keys1[0]
+
+
+        l1 = [fist_node]
+        l2 = [fist_node]
+
+        while l1:
+            i = l1.pop(0)
+            n = self.dic[i]
+
+            if n.tag:
+                continue
+            n.tag = True
+
+            for t in n.connect:
+                n2 = self.dic[t]
+                if not n2.tag:
+                    l1.append(t)
+                    l2.append(t)
+
+
+        for i in self.dic.keys():
+            if i not in l2:
+                return False
+
+        return True
+
+
 if __name__ == '__main__':
     g = graph()
     g.connect(1, 2)
@@ -84,10 +119,16 @@ if __name__ == '__main__':
     g.connect(8, 4)
     g.connect(1, 8)
     for k, v in g.dic.items():
-        print(k, '   ', v.connect)
+        pass
+        #print(k, '   ', v.connect)
 
     b = g.find_path(1, 3)
-    print(b.dic['dis'])
+    #print(b.dic['dis'])
 
     c = g.find_path(1, 4)
-    print(c.dic['dis'])
+    #print(c.dic['dis'])
+
+    g.connect(100, 200)
+
+    t = g.all_connect()
+    print(t)

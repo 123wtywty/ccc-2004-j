@@ -1,4 +1,3 @@
-import time
-time1 = time.localtime().tm_wday
-
-print(time1)
+d= {'a' : 'b'}
+i = d.keys()
+print(i)
